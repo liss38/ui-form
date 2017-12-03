@@ -1,0 +1,38 @@
+.button {
+
+
+	position: relative;
+
+	display: block;
+	padding-left: 9px;
+	padding-right: 9px;
+
+	box-sizing: border-box;
+
+	background-color: #93c273;
+	box-shadow: inset 0px -3px 0px rgba(0, 0, 0, .1);
+	border-radius: 3px;
+	border: 0;
+
+	text-decoration: none;
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 25px;
+	color: #fff;
+
+	cursor: pointer;
+	outline: 0;
+
+
+
+	&--mock {
+		position: fixed;
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%, -50%);
+	}
+}
+
+.button[disabled] {
+	background-color: #ccc;
+}

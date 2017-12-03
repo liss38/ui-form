@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="utf-8">
+	<title>Authorize</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<link rel="stylesheet" href="css/style.min.css">
+</head>
+<body class="auth-page-body">
+	<div class="page  auth-page">
+		<header class="page__header"></header>
+		<main class="page__main">
+			<a href="#" class="button  button--mock  js-modal-link" data-modal-target-class="auth-form-modal">Sign Up</a>
+		</main>
+		<footer class="page__footer  page__footer--bottom">
+			<div class="footer-signup">Not a registered user yet?  <a href="signup.html" class="js-modal-link" data-modal-target-class="auth-form-modal">Sign up now!</a></div>
+		</footer>
+	</div>
+
+
+	<div class="modal-window  modal-window--active  auth-form-modal">
+		<div class="modal-close"></div>
+		<div class="modal-window__inner">
+			<form class="auth-form">
+				<div class="form-field  auth-login">
+					<div class="textline">
+						<span class="textline__icon  textline__icon--user"></span>
+						<input type="text" class="textline__origin" placeholder="email" required pattern=".+@.+\..+">
+					</div>
+				</div>
+				<div class="form-field  auth-password">
+					<div class="textline">
+						<span class="textline__icon  textline__icon--key"></span>
+						<input type="password" class="textline__origin" placeholder="password" required pattern=".{5,}">
+					</div>
+				</div>
+				<a href="#" class="auth-forgot">Forgot your password?</a>
+				<div class="form-field  auth-remember">
+					<div class="tumbler">
+						<input id="auth-remember" type="checkbox" class="tumbler__origin" checked>
+						<span class="tumbler__icon"></span>
+						<label for="auth-remember" class="tumbler__togglezone">Remember?</label>
+					</div>
+				</div>
+				
+				<input type="submit" class="button  auth-submit" value="Sign In">
+			</form>
+		</div>
+	</div>
+
+
+	<script src="js/bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,106 @@
+/*
+	КАСТОМИЗАЦИЯ ДЛЯ <input type="text">
+*/
+.textline {
+	position: relative;
+
+	display: block;
+	height: 30px;
+
+	box-sizing: border-box;
+
+	border: 1px solid #e3e3e3;
+	border-radius: 3px;
+
+
+	&__origin {
+		display: block;
+		width: 100%;
+		height: 100%;
+		margin: 0;
+		padding: 0 0 0 42px;
+		box-sizing: border-box;
+
+		background-color: #fff;
+
+		-webkit-appearance: none;
+		-moz-appearance: none;
+		appearance: none;
+
+		font-family: @roboto;
+		font-size: 14px;
+		color: #999;
+
+		outline: none;
+		border: 0;
+	}
+
+
+	&__icon {
+		position: absolute;
+		top: 0;
+		left: 0;
+
+		display: block;
+		height: 100%;
+		width: 31px;
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		box-sizing: border-box;
+
+		border-right: 1px solid #e5e5e8;
+		background-position: center center;
+		background-repeat: no-repeat;
+		background-color: #fff;
+
+
+		&--user {
+			background-image: url(@icons_base64-user--light);
+		}
+		&--user.onfocus {
+			background-image: url(@icons_base64-user--dark);
+		}
+
+
+		&--key {
+			background-image: url(@icons_base64-key--light);
+		}
+		&--key.onfocus {
+			background-image: url(@icons_base64-key--dark);
+		}
+
+
+		&:before {
+			position: absolute;
+			top: 50%;
+			right: -12px;
+			z-index: 1;
+			margin-top: -6px;
+
+			content: '';
+
+			display: block;
+			border: 6px solid transparent;
+			border-left: 6px solid #e3e3e3;
+		}
+		&:after {
+			position: absolute;
+			top: 50%;
+			right: -11px;
+			z-index: 1;
+
+			margin-top: -6px;
+
+			content: '';
+
+			display: block;
+			border: 6px solid transparent;
+			border-left: 6px solid #fff;
+		}
+	}
+}
+
+.textline.onfocus {
+	border-color: #93c273;
+	box-shadow: 0 0 2px 2px rgba(0,0,0,.1);
+}

@@ -1,0 +1,90 @@
+.tumbler {
+	position: relative;
+
+
+	&__origin {
+		display: none;
+	}
+
+
+	&__icon {
+		position: absolute;
+		top: 50%;
+		margin-top: -7px;
+		margin-left: 14px;
+		/*z-index: -1;*/
+
+		display: inline-block;
+		width: 42px;
+		height: 14px;
+		background-color: #ca7c7c;
+		border-radius: 7px;
+		box-shadow: inset 0px 2px 1px rgba(0, 0, 0, .3);
+
+
+		&:before {
+			position: absolute;
+			top: 50%;
+			left: -14px;
+			margin-top: -4px;
+
+			content: '';
+
+			display: block;
+			width: 8px;
+			height: 8px;
+
+			background: transparent url(@icons_base64-cross) center center no-repeat;
+		}
+
+
+		&:after {
+			position: absolute;
+			top: 50%;
+			left: -2px;
+			margin-top: -9px;
+
+			content: '';
+
+			display: block;
+			width: 18px;
+			height: 18px;
+
+			-webkit-box-sizing: border-box;
+			-moz-box-sizing: border-box;
+			box-sizing: border-box;
+
+			border-radius: 50%;
+			background-color: #fff;
+			border: 1px solid rgba(0, 0, 0, .1);
+			box-shadow: inset 1px 0 9px 0px rgba(0, 0, 0, .12),
+						0px 0px 2px 2px rgba(0, 0, 0, .08);
+		}
+	}
+
+
+	&__togglezone {
+		position: relative;
+		z-index: 2;
+
+		padding-left: 64px;
+
+		cursor: pointer;
+	}
+}
+
+
+/* механизм переключения тумблера */
+.tumbler__origin:checked + .tumbler__icon {
+	background-color: #96c676;
+
+
+	&:before {
+		background-image: url(@icons_base64-tick);
+	}
+
+
+	&:after {
+		left: 24px;
+	}
+}
